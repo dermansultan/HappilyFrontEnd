@@ -18,6 +18,12 @@ class UserQuiz extends React.Component {
   render() {
     return (
       <div className="containerMain UserQuiz">
+      <div className='botModal'>
+            <div className='modalContent'>
+          <img src={GoodBot} style={{width: "auto", height: "6em", paddingLeft:"10px"}}></img>
+          <p className='bodyText black' style={{paddingLeft: "10px", color: "white", width: "50%"}}>This is a modal dialogue from the bot.</p>
+          </div>
+      </div>
         <div className="left UserQuiz">
           <div className="userQuizContentLeft">
             <img className='bot quizBanner' alt="HapplyTheBot" src={headBot} />
