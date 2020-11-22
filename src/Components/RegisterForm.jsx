@@ -49,7 +49,6 @@ class RegisterForm extends React.Component {
     axios.get('http://localhost:3050/ping').then((res)=> {
       console.log(res);
       console.log('Ping response:', res.data);
-      this.showModal();
     })  
   }
 

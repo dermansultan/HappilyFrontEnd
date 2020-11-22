@@ -1,3 +1,4 @@
+import Axios from "axios";
 import React from "react";
 
 class JournalEntry extends React.Component{
@@ -14,8 +15,18 @@ class JournalEntry extends React.Component{
       }
     
       handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
+        //alert('A name was submitted: ' + this.state.value);
         event.preventDefault();
+        let prompt = this.state.value;
+        console.log("Journal Button clicked"); 
+        Axios.post('http://localhost:3050/classify', {value : prompt}).then((res)=> {
+          console.log("result", res); 
+          let score = res.data
+          console.log(score); 
+          let emotion = res.data[1]
+          console.log(emotion);
+        })
+
       }
     
       render() {
