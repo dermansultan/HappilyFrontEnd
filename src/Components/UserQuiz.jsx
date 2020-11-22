@@ -5,6 +5,8 @@ import GreatBot from "../Assets/Img/GreatBot.png";
 import UnsureBot from "../Assets/Img/UnsureBot.png";
 import headBot from "../Assets/Img/headBot.png"
 import JournalEntry from "./journalEntry"
+import $ from 'jquery'; 
+
 
 class UserQuiz extends React.Component {
   constructor(props) {
@@ -14,14 +16,19 @@ class UserQuiz extends React.Component {
   }
 
   // define methods
+   closeModal = () => {
+     console.log("Closing Modal"); 
+    $('.botModal').css("visibility", "hidden")
+  }
 
   render() {
     return (
       <div className="containerMain UserQuiz">
-      <div className='botModal'>
+      <div className='botModal' style={{visibility: "hidden"}}>
             <div className='modalContent'>
-          <img src={GoodBot} style={{width: "auto", height: "6em", paddingLeft:"10px"}}></img>
-          <p className='bodyText black' style={{paddingLeft: "10px", color: "white", width: "50%"}}>This is a modal dialogue from the bot.</p>
+          <img id='modalImage' src={GoodBot} style={{width: "auto", height: "6em", paddingLeft:"10px"}}></img>
+          <p id='modalText' className='bodyText black' style={{paddingLeft: "10px", color: "white", width: "50%"}}>This is a modal dialogue from the bot.</p>
+          <button id='btn btn-dark dimissButton' onClick={this.closeModal}> X </button>
           </div>
       </div>
         <div className="left UserQuiz">

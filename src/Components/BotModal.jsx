@@ -14,4 +14,5 @@ const BotModal = ({ handleClose, show, children }) => {
       </div>
     );
   };
-export default BotModal 
+
+  export default BotModal 
