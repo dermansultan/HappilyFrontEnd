@@ -25,6 +25,10 @@ class JournalEntry extends React.Component{
                 <form className='journalForm' onSubmit={this.handleSubmit} id='journalForm'>
                 <label>Reset Journal Entry</label>
                 <textarea className='journalInput' type="text" form='journalForm' value={this.state.value} onChange={this.handleChange} />
+                <div className="formBtnWrapper">
+                <button className='journalBtn Cancel'>I don’t feel like journaling today</button>
+                <input className='journalBtn Next' type='submit' value="Next"></input>
+                </div>
                 </form>
             </div>
         );

@@ -14,7 +14,6 @@ import UserQuiz from './Components/UserQuiz'
 function App() {
   return (<div className="App">
   <Router>
-  {/* <Header></Header> */}
     <Switch>
       <Route exact path='/'>
         <Start></Start>
@@ -31,7 +30,6 @@ function App() {
         <UserQuiz></UserQuiz>
       </Route>
     </Switch>
-    {/* <Footer></Footer> */}
   </Router>
   </div>)
       
