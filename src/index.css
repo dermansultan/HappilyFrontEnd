@@ -309,6 +309,15 @@
   flex-direction: column;
 }
 
+/* Journal Component Styles */
+
+.journalInput{
+width: 200px;
+text-align: start;
+height: 200px;
+}
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .header.White.Registration {
