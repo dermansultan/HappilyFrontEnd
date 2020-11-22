@@ -20,7 +20,9 @@ function App() {
         <Start></Start>
       </Route>
       <Route path='/Registration'>
-        <Registration></Registration>
+        <Registration> 
+          <Link to='/Components/RegistrationForm.jsx'> </Link>
+      </Registration>
       </Route>
       <Route path='/Onboarding'>
         <Onboarding></Onboarding>

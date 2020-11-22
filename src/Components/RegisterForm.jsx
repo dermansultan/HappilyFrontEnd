@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react'; 
+import axios from 'axios';
 
 class RegisterForm extends React.Component {
   constructor(props) {
@@ -14,7 +14,22 @@ class RegisterForm extends React.Component {
     this.setState({value: event.target.value});
   }
 
+   pingServer = () => 
+  {
+    console.log("Pinging server"); 
+    
+    axios.get('http://localhost:3050/ping').then((res)=> {
+      console.log(res);
+      console.log('Ping response:', res.data);
+    })
+
+  
+ 
+  }
+
   handleSubmit(event) {
+     
+    this.pingServer(); 
     alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
   }
