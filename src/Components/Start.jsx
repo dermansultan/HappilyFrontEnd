@@ -1,12 +1,13 @@
 import React from "react";
+import botHappy from '../Assets/Img/GreatBot.png'
 
 const Start = () => {
   return (
     <div className="containerMain home">
       <div className="ContentWrapper home">
         <div className="botPlaceHolder">
-          <img alt="HapplyTheBot"/>
-          <h1 className="header white" style={{ color: "white" }}>
+          <img alt="HapplyTheBot" src={botHappy} style={{width:"auto", height:"15em"}}/>
+          <h1 className="header white" style={{ color: "white", paddingTop:"50px" }}>
             Welcome!
           </h1>
         </div>
