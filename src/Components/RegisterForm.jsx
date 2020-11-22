@@ -1,4 +1,5 @@
 import React from 'react'
+import {  Link } from "react-router-dom";
 
 
 class RegisterForm extends React.Component {
@@ -34,7 +35,7 @@ class RegisterForm extends React.Component {
           Email
           </label>
           <input type="text" value={this.state.value} onChange={this.handleChange} />
-        <button className='registerFormBtn'>Finish</button>
+        <button className='registerFormBtn'><Link to="/Onboarding">Onboarding</Link></button>
       </form>
     );
   }
