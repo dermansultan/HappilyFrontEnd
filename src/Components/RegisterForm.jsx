@@ -2,14 +2,41 @@ import React from 'react';
 import axios from 'axios';
 import {  Link } from "react-router-dom";
 
-class RegisterForm extends React.Component {
+class RegisterForm extends React.Component {  
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {value: '', show: false};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  showModal = () => {
+    this.setState({show:true});
+  }
+
+  hideModal = () => {
+    this.setState({show:false});
+  }
+
+
+   Modal = ({ handleClose, show, children }) => {
+    const showHideClassName = show ? 'modal display-block' : 'modal display-none';
+  
+    return (
+      <div className={showHideClassName}>
+        <section className='modal-main'>
+          {children}
+          <button
+            onClick={handleClose}
+          >
+            Close
+          </button>
+        </section>
+      </div>
+    );
+  };
+  
 
   handleChange(event) {
     this.setState({value: event.target.value});
@@ -22,10 +49,8 @@ class RegisterForm extends React.Component {
     axios.get('http://localhost:3050/ping').then((res)=> {
       console.log(res);
       console.log('Ping response:', res.data);
-    })
-
-  
- 
+      this.showModal();
+    })  
   }
 
   handleSubmit(event) {
@@ -54,6 +79,10 @@ class RegisterForm extends React.Component {
       </form>
     );
   }
+
+
 }
+
+
 
 export default RegisterForm
