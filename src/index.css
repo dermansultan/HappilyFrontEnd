@@ -369,6 +369,37 @@ justify-content: space-between;
   font-size: clamp(14px, 1.5vw, 18px);
 }
 
+  /* bot Modal */
+  .botModal{
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+
+  .modalContent{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--main-bg-colour);
+    min-width: 270px;
+    min-height: 150px;
+    border-radius: 10px;
+  }
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .header.White.Registration {
@@ -506,6 +537,8 @@ justify-content: space-between;
     flex-direction: column;
     align-items: center;
   }
+
+
 
 }
 
